@@ -74,7 +74,7 @@ Download.belongsTo(User);
 sequelize
   .sync({ force: true }) //{force:true}
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT, () => {
       console.log("server running successfully");
     });
   })
